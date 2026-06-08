@@ -1,0 +1,303 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+  flex: 1;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 6.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.sidebarTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.75rem;
+}
+
+.categoryGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.categoryName {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+}
+
+.topicList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.topicItem {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topicItem:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.activeTopic {
+  background: var(--bg-primary) !important;
+  border-color: var(--border-bright) !important;
+  color: var(--accent-cyan) !important;
+  font-weight: 600;
+  box-shadow: var(--shadow-glow);
+}
+
+.quizLinkItem {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-glass);
+  padding-top: 1rem;
+}
+
+.quizButton {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(79, 172, 254, 0.1));
+  border: 1px solid var(--border-bright);
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quizButton:hover {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: #080b10;
+  box-shadow: var(--shadow-glow-bright);
+}
+
+/* Reader Container */
+.reader {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  min-height: 500px;
+}
+
+.header {
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 1.5rem;
+}
+
+.categoryTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.topicTitleText {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.topicSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* Analogy block */
+.analogyCard {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(79, 172, 254, 0.05));
+  border: 1px dashed var(--accent-amber);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.analogyIcon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.analogyTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-amber);
+  margin-bottom: 0.25rem;
+}
+
+.analogyBody {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Article Body */
+.articleBody {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  white-space: pre-line;
+}
+
+/* Diagram Section */
+.diagramWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 1.5rem;
+  gap: 0.5rem;
+}
+
+.diagramSvg {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+}
+
+.diagramCaption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Key Concepts */
+.conceptsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionHeading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-cyan);
+  padding-left: 0.75rem;
+}
+
+.conceptsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.conceptCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.conceptCard:hover {
+  border-color: var(--border-bright);
+}
+
+.conceptTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.conceptDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Formulas */
+.formulasSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Code Container Header */
+.codeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #080b10;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 1.25rem;
+  margin-bottom: -1.25rem; /* negative margin to join the code block */
+}
+
+/* Simulator Section wrapper */
+.simSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: relative;
+    top: 0;
+  }
+}

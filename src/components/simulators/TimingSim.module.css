@@ -1,0 +1,222 @@
+.simulator {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.sliderGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sliderLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.sliderVal {
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-tertiary);
+  outline: none;
+  transition: background 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+  transition: transform 0.1s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.displayPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.waveformsContainer {
+  position: relative;
+  width: 100%;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.waveSvg {
+  width: 100%;
+  height: 220px;
+  overflow: visible;
+}
+
+.waveLabel {
+  fill: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: var(--font-mono);
+}
+
+.waveLine {
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.clkLine {
+  stroke: var(--accent-blue);
+}
+
+.dataLine {
+  stroke: var(--accent-amber);
+}
+
+.violMarker {
+  fill: rgba(244, 63, 94, 0.15);
+  stroke: var(--accent-rose);
+  stroke-dasharray: 2,2;
+  stroke-width: 1;
+}
+
+.slackPanel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.slackCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slackCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.slackOk::before {
+  background: var(--accent-teal);
+}
+
+.slackViol::before {
+  background: var(--accent-rose);
+}
+
+.slackLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.slackVal {
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+.slackStatus {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.alertsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.alertViol {
+  background: rgba(244, 63, 94, 0.1);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: #fda4af;
+}
+
+[data-theme="light"] .alertViol {
+  background: rgba(244, 63, 94, 0.05);
+  color: #be123c;
+}
+
+.alertOk {
+  background: rgba(5, 230, 193, 0.1);
+  border: 1px solid rgba(5, 230, 193, 0.3);
+  color: #a7f3d0;
+}
+
+[data-theme="light"] .alertOk {
+  background: rgba(5, 230, 193, 0.05);
+  color: #065f46;
+}
+
+.alertIcon {
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .simulator {
+    grid-template-columns: 1fr;
+  }
+}
